@@ -1,120 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Personal Portfolio - Atharva Kassa</title>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Portfolio - Atharva Kassa</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+  
+  <!-- AOS Animation -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+  
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body class="light-mode">
+  
+  <!-- Theme Toggle -->
+  <button id="theme-toggle" class="theme-btn">
+    <i class="bi bi-moon-fill"></i>
+  </button>
 
-    <!-- bootstrap css cdn link  -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
-      crossorigin="anonymous"
-    />
-
-    <!-- custom css file -->
-    <link rel="stylesheet" href="css/style.css" />
-
-    <!-- google font link -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- bootstrap icon cdn link  -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"
-    />
-
-    <!-- for adding animation to website we have use AOS library 
-    AOS Library css file cdn link -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-    <!-- jquery cdn link  -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-  </head>
-  <body>
-    <!-- navbar starts -->
-    <nav
-      id="navbar-top"
-      class="navbar navbar-expand-lg navbar-light bg-white sticky-top"
-    >
-      <div class="container-fluid px-5">
-        <a class="navbar-brand fw-bold fs-2" href="#" style="color: #3f396d"
-          >Portfolio</a
-        >
-        <button
-          class="nav-menu d-md-none"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <i class="bi bi-menu-button-fill"></i>
-        </button>
-        <div
-          class="collapse navbar-collapse justify-content-center"
-          id="navbarNav"
-        >
-          <ul class="navbar-nav gap-4" style="font-size: 1.1rem">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#service">Service</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#portfolio">Portfolio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#blog">Blog</a>
-            </li>
-          </ul>
-        </div>
-        <a class="nav-link" href="#contact"><button class="c-btn ms-4 py-2 px-4 rounded-pill d-none d-md-block">Contact</button></a>
+  <!-- Navbar -->
+  <nav id="navbar-top" class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+    <div class="container-fluid px-5">
+      <a class="navbar-brand fw-bold fs-2" href="#" style="color: #3f396d">Portfolio</a>
+      <button class="nav-menu d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <i class="bi bi-menu-button-fill"></i>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav gap-4" style="font-size: 1.1rem">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#service">Service</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#certificates">Certificates</a></li>
+          <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+        </ul>
       </div>
-    </nav>
-    <!-- navbar ends here -->
+      <a class="nav-link" href="#contact">
+        <button class="c-btn ms-4 py-2 px-4 rounded-pill d-none d-md-block">Contact</button>
+      </a>
+    </div>
+  </nav>
 
-    <!-- home section starts  -->
-    <section class="home pt-5 pb-5" id="home">
-      <div class="row justify-content-evenly align-middle">
-        <!-- here data-aos is used for adding aos animation  -->
-        <div class="col-10 col-md-6 text-center text-md-start" data-aos="slide-right">
-          <h2 style="color: #3f396d">
-            Hello! I Am <br /><span class="c-orange">Atharva Kassa</span>
-          </h2>
-          <p class="text-muted">
-            I'm A First Year Student at Vishwakarma Institute of Technology Pune, pursuing BTech in Information Technology (IT).
-          </p>
-          <button class="c-btn h-btn mt-3 py-3 px-5 rounded-pill">
-            Hire Me
-          </button>
-          <a href="" class="link ms-4 d-none">See My Work</a>
+  <!-- Home Section -->
+  <section class="home pt-5 pb-5" id="home">
+    <div class="container">
+        <div class="row justify-content-evenly align-items-center">
+            <!-- Profile Image (will appear first on mobile) -->
+            <div class="col-12 col-md-4 order-1 order-md-2 mb-4 mb-md-0 text-center home-image">
+                <img src="images/Profile_Pic.png" class="img-fluid mobile-profile-img" alt="Atharva Kassa">
+            </div>
+            
+            <!-- Content (will appear second on mobile) -->
+            <div class="col-12 col-md-6 order-2 order-md-1 text-center text-md-start home-content" data-aos="slide-right">
+                <h2 style="color: #3f396d">
+                    Hello! I Am <br><span id="typewriter" class="c-orange"></span>
+                </h2>
+                <p class="text-muted">
+                    I'm A First Year Student at Vishwakarma Institute of Technology Pune, pursuing BTech in Information Technology (IT).
+                </p>
+                <button class="c-btn h-btn mt-3 py-3 px-5 rounded-pill hire-me-btn">
+                    Hire Me
+                </button>
+            </div>
         </div>
-        <div class="col-10 col-md-4 d-none d-md-block">
-          <img src="images/Profile_Pic.png" class="img-fluid" alt="" />
-        </div>
-      </div>
-    </section>
-    <!-- home section ends here -->
+    </div>
+</section>
 
-    <!-- expertise section starts -->
-    <section class="expertise mt-5" id="service">
+  <!-- expertise section starts -->
+  <section class="expertise mt-5" id="service">
+    <div class="container">
       <div class="heading text-center">
         <small>My Expertise</small>
         <h3>
           Provide Wide Range of <br />
           Digital Services
         </h3>
-      </div><br><br><br><br><br><br>
+      </div>
       <div class="row justify-content-evenly mt-5">
         <div class="col-10 col-md-4" data-aos="fade-up">
           <div class="service-card">
@@ -130,53 +104,35 @@
               <p class="text-muted">
                 I have experience with C and Python and have worked on multiple projects, and trying to develop more.
               </p>
-              <a href="" class="link">Read More</a>
+              <a href="#about" class="link">Read More</a>
             </div>
           </div>
         </div>
         <div class="col-md-4 col-10" data-aos="fade-up">
           <div class="service-card">
-            <div class="img"><br><br><br>
+            <div class="img">
               <img
                 src="images/web-development-icon-trendy-flat-vector-white-background-programming-collection-illustration-can-be-use-mobile-eps-130326341.jpg"
                 class="w-30 img-fluid img"
                 alt=""
               />
-            </div><br>
-            <div class="content mt-3">
+            </div>	
+            <div class="content mt-3"><br>
               <h4>Web Development</h4>
               <p class="text-muted">
                 I have experience in web development using HTML, CSS, and JavaScript, and I've created multiple projects with responsive and dynamic designs. One of the project is Rock Paper Scissors Game
               </p>
-              <a href="" class="link">Read More</a>
+              <a href="#portfolio" class="link">Read More</a>
             </div>
           </div>
         </div>
-        <!-- <div class="col-md-4 col-10" data-aos="fade-up">
-          <div class="service-card">
-            <div class="img">
-              <img
-                src="images/service-icon3.png"
-                class="w-25 img-fluid img"
-                alt=""
-              />
-            </div>
-            <div class="content mt-3">
-              <h4>Debugging</h4>
-              <p class="text-muted">
-                Dolor repellendus temporibus autem quibusdam officiis debitis
-                rerum neces aibus minima veniam.
-              </p>
-              <a href="" class="link">Read More</a>
-            </div>
-          </div>
-        </div> -->
       </div>
-    </section>
-    <!-- expertise section ends here -->
+    </div>
+  </section>
 
-    <!-- skill section starts -->
-    <section class="skill mt-5 py-5" id="about">
+  <!-- skill section starts -->
+  <section class="skill mt-5 py-5" id="about">
+    <div class="container">
       <div class="row justify-content-evenly">
         <div class="col-10 col-md-5 skill-with-progress" data-aos="slide-right">
           <div class="row justify-content-evenly">
@@ -231,9 +187,9 @@
               Additionally, I have expertise in Microsoft Office for documentation, presentations, and data management. I am also multilingual, with proficiency in English and basic knowledge of Spanish, enhancing my ability to communicate effectively in diverse environments.
             </p>
             <button class="c-btn h-btn mt-3 py-3 px-5 rounded-pill">
-              <!-- here download attribute is used for adding download functionality to button  -->
               <a
-                href="Entry Level Web Developer Resume.pdf"
+                href="Entry Level Web Developer Resume.pdf" 
+                target="_blank"
                 download="SampleCV"
                 style="text-decoration: none;color: #fff;"
                 >Download CV</a
@@ -242,18 +198,18 @@
           </div>
         </div>
       </div>
-    </section>
-    <!-- skill section end here -->
+    </div>
+  </section>
 
-    <!-- portfolio section starts here -->
-    <section class="portfolio" id="portfolio">
+  <!-- portfolio section starts here -->
+  <section class="portfolio" id="portfolio">
+    <div class="container">
       <div class="heading text-center pt-5">
         <small>Creative Work</small>
         <h3>Check My Portfolio</h3>
       </div>
 
       <div id="myBtnContainer" class="text-center mt-4">
-        <!-- here we will create custom attribute using data- for filtering -->
         <button class="filter-item" data-filter="all">All</button>
         <button class="filter-item" data-filter="game">Game</button>
         <button class="filter-item" data-filter="webapp">Web App</button>
@@ -268,8 +224,7 @@
                 <h4 class="card-title">Rock Paper Scissors Game</h4>
                 <span class="badge bg-secondary badge-pill">HTML&CSS</span>
                 <span class="badge bg-secondary badge-pill">JavaScript</span>
-                <span class="badge bg-secondary badge-pill mb-2">Game</span
-                ><br />
+                <span class="badge bg-secondary badge-pill mb-2">Game</span><br />
                 <a href="https://rpsbyatharva.netlify.app" target="_blank" class="link">Click Here To Visit</a>
               </div>
             </div>
@@ -285,8 +240,7 @@
                 <h4 class="card-title">Age Calculator Web App</h4>
                 <span class="badge bg-secondary badge-pill">HTML&CSS</span>
                 <span class="badge bg-secondary badge-pill">JavaScript</span>
-                <span class="badge bg-secondary badge-pill mb-2">Website</span
-                ><br />
+                <span class="badge bg-secondary badge-pill mb-2">Website</span><br />
                 <a href="https://ather829.github.io/ageCalc/" target="_blank" class="read-more-btn link">Click Here To Visit</a>
               </div>
             </div>
@@ -298,111 +252,109 @@
                 <h4 class="card-title">Coin Toss</h4>
                 <span class="badge bg-secondary badge-pill">HTML&CSS</span>
                 <span class="badge bg-secondary badge-pill">JavaScript</span>
-                <span class="badge bg-secondary badge-pill mb-2">WebApp</span
-                ><br />
+                <span class="badge bg-secondary badge-pill mb-2">WebApp</span><br />
                 <a href="https://ather829.github.io/CoinToss/" target="_blank" class="read-more-btn link">Click Here To Visit</a>
               </div>
             </div>
           </div>
         </div>
-    </section>
-    <!-- https://ather829.github.io/ageCalc/
-      -->
-    <!-- portfolio section ends here -->
-
-    <!-- testimonial section starts  -->
-    <!-- <section class="testimonial mt-5 pt-5" id="testimonial">
-      <div class="row justify-content-evenly">
-        <div class="col-md-4 col-10" data-aos="slide-right">
-          <img src="images/tastimonials-img.png" class="img-fluid" alt="" />
-        </div>
-        <div class="col-md-6 col-10 mt-5" data-aos="slide-left">
-          <div class="heading">
-            <small>Testimonials</small>
-            <h3>Happy Clients Feedback</h3>
-            here we will use carousel element from bootstrap
-            <div
-              id="carouselExampleControls"
-              class="carousel slide"
-              data-bs-ride="carousel"
-            >
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <div class="row justify-content-evenly">
-                    <div class="col-2 text-center">
-                      <i class="bi bi-quote"></i>
-                    </div>
-                    <div class="col-10">
-                      <p class="text-muted">
-                        Quisruam est, qui dolorem ipsum quia dolor sit amet,
-                        consecteaur aeci velit, sed quia non numquam eius modi
-                        tempora incidunt ut lao magnam aliquam quaerat ...
-                      </p>
-                      <h4>Kevin Andrew</h4>
-                      <small class="fs-6 text-muted">CEO of Company</small>
-                    </div>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <div class="row justify-content-evenly">
-                    <div class="col-2 text-center">
-                      <i class="bi bi-quote"></i>
-                    </div>
-                    <div class="col-10">
-                      <p class="text-muted">
-                        Quisruam est, qui dolorem ipsum quia dolor sit amet,
-                        consecteaur aeci velit, sed quia non numquam eius modi
-                        tempora incidunt ut lao magnam aliquam quaerat ...
-                      </p>
-                      <h4>Kevin Andrew</h4>
-                      <small class="fs-6 text-muted">CEO of Company</small>
-                    </div>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <div class="row justify-content-evenly">
-                    <div class="col-2 text-center">
-                      <i class="bi bi-quote"></i>
-                    </div>
-                    <div class="col-10">
-                      <p class="text-muted">
-                        Quisruam est, qui dolorem ipsum quia dolor sit amet,
-                        consecteaur aeci velit, sed quia non numquam eius modi
-                        tempora incidunt ut lao magnam aliquam quaerat ...
-                      </p>
-                      <h4>Kevin Andrew</h4>
-                      <small class="fs-6 text-muted">CEO of Company</small>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <button
-                class="nextprev-btn rounded-pill prev-btn"
-                type="button"
-                data-bs-target="#carouselExampleControls"
-                data-bs-slide="prev"
-              >
-                <i class="bi bi-arrow-left-circle-fill prev"></i>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button
-                class="nextprev-btn rounded-pill next-btn"
-                type="button"
-                data-bs-target="#carouselExampleControls"
-                data-bs-slide="next"
-              >
-                <i class="bi bi-arrow-right-circle-fill next"></i>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div>
-          </div>
-        </div>
       </div>
-    </section> -->
-    <!-- testimonial ends here -->
+    </div>
+  </section>
 
-    <!-- blog section starts -->
-    <section class="blog mt-5 pb-5" id="blog">
+  <!-- Certificates Section -->
+  <section class="certificates mt-5 py-5" id="certificates">
+    <div class="container">
+      <div class="heading text-center">
+          <small>My Achievements</small>
+          <h3>Certificates</h3>
+      </div>
+      <div class="row justify-content-center px-4 mt-4">
+          <div class="col-md-4 col-10 mt-4" data-aos="fade-up">
+              <div class="card certificate-card">
+                  <img src="images/IntelliseIT_C_Programming.png" class="card-img-top" alt="Python Certificate">
+                  <div class="card-body text-center">
+                      <h4>C Programming</h4>
+                      <p class="text-muted">IntelliseIT - 2024</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4 col-10 mt-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="card certificate-card">
+                  <img src="images/Basics of Python.png" class="card-img-top" alt="Web Dev Certificate">
+                  <div class="card-body text-center">
+                      <br><h4>Basics of Python</h4>
+                      <p class="text-muted">Infosys Springboard - 2024</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4 col-10 mt-4" data-aos="fade-up" data-aos-delay="200">
+              <div class="card certificate-card">
+                  <img src="images/TCS_Communication_Skills.jpg" class="card-img-top" alt="Academic Excellence">
+                  <div class="card-body text-center">
+                      <br><h4>Communication Skills</h4>
+                      <p class="text-muted">TCS - 2024</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <div class="row justify-content-center px-4 mt-4">
+      <div class="col-md-4 col-10 mt-4" data-aos="fade-up">
+          <div class="card certificate-card">
+              <img src="images/Web Dev Foundation.png" class="card-img-top" alt="Python Certificate">
+              <div class="card-body text-center">
+                  <h4>Web Development Frontend Foundation</h4>
+                  <p class="text-muted">Infosys Springboard - 2025</p>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-4 col-10 mt-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="card certificate-card">
+              <img src="images/Ekasutram.png" class="card-img-top" alt="Web Dev Certificate">
+              <div class="card-body text-center">
+                  <h4>Mathletics</h4>
+                  <p class="text-muted">VIT PUNE EKASUTRAM CLUB - 2024</p>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-4 col-10 mt-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="card certificate-card">
+              <img src="images/DA using Excel.png" class="card-img-top" alt="Academic Excellence">
+              <div class="card-body text-center">
+                  <h4>DA Using Excel</h4>
+                  <p class="text-muted">VIT Pune - 2025</p>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="row justify-content-center px-4 mt-4">
+  <div class="col-md-4 col-10 mt-4" data-aos="fade-up">
+      <div class="card certificate-card">
+          <img src="images/Intro to AI.png" class="card-img-top" alt="Python Certificate">
+          <div class="card-body text-center">
+              <h4>Introduction to AI</h4>
+              <p class="text-muted">Infosys Springboard - 2025</p>
+          </div>
+      </div>
+  </div>
+  <div class="col-md-4 col-10 mt-4" data-aos="fade-up" data-aos-delay="100">
+      <div class="card certificate-card">
+          <img src="images/Vishwa_Forum.jpg" class="card-img-top" alt="Web Dev Certificate">
+          <div class="card-body text-center">
+              <h4>VishwaForum'24</h4>
+              <p class="text-muted">VIT PUNE Vishwa Conclave Club - 2024</p>
+          </div>
+      </div>
+  </div>
+</div>
+</div>
+  </section>
+
+  <!-- blog section starts -->
+  <section class="blog mt-5 pb-5" id="blog">
+    <div class="container">
       <div class="heading text-center pt-5">
         <small>Latest News</small>
         <h3>Blog & Articles</h3>
@@ -468,229 +420,13 @@
             </div>
           </div>
         </div>
-        <!-- here we will make modals if Read more link is clicked the modal will popup -->
-        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              
-                <button type="button" class="btn-c rounded-pill" data-bs-dismiss="modal"><i class="bi bi-x-circle-fill"></i></button>
-              
-              <div class="modal-body px-4">
-                <div class="img">
-                  <img src="images/RPSgame.png" class="img-fluid" alt="">
-                </div>
-                <div class="content mt-3">
-                  <small>By Atharva Kassa</small
-                    ><span class="text-muted ms-2">Mar 15,2025</span>
-                  <h4 class="card-title mt-3">Rock Paper Scissors Game</h4>
-                  <div class="social-links mt-4">
-                      <button href="" class="rounded-pill dribble">
-                        <i class="bi bi-dribbble"></i>
-                      </button>
-                      <button href="" class="rounded-pill whatsapp">
-                        <i class="bi bi-whatsapp"></i>
-                      </button>
-                      <button href="" class="rounded-pill behance">
-                        <i class="bi bi-behance"></i>
-                      </button>
-                  </div>
-                  <p class="text-muted mt-3">The Rock, Paper, Scissors game is a web-based interactive game built using HTML, CSS, and JavaScript. The interface consists of three buttons for the user to select Rock, Paper, or Scissors, while the computer makes a random choice. The game follows the standard rules: Rock beats Scissors, Scissors beat Paper, and Paper beats Rock, with a tie if both choices are the same. JavaScript handles game logic, player input, computer selection, and result calculation, updating the UI dynamically. CSS enhances the design with responsive styling, animations, and hover effects for a smooth user experience. The game provides instant feedback with a display showing player and computer choices along with the result. It is an excellent beginner project for learning DOM manipulation, event handling, and randomness in JavaScript.</p>
-                </div>
-              </div>
-              <div class="heading px-2">
-                <h3 class="fs-3 ms-3">Leave A Comment</h3>
-              </div>
-              <div class="contact-form ms-3 mt-3 pb-4 px-2">
-                <div class="mb-3">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="exampleFormControlInput1"
-                    placeholder="Name"
-                  />
-                </div>
-                <div class="mb-3">
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="exampleFormControlInput1"
-                    placeholder="E-mail"
-                  />
-                </div>
-                <div class="mb-3">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="exampleFormControlInput1"
-                    placeholder="Mobile No."
-                  />
-                </div>
-                <div class="mb-3">
-                  <textarea
-                    class="form-control"
-                    id="exampleFormControlTextarea1"
-                    placeholder="Message"
-                    rows="5"
-                  ></textarea>
-                </div>
-                <button class="c-btn h-btn mt-3 py-2 px-4 rounded-pill">
-                  Submit
-                </button>
-              </div>
-              
-            </div>
-          </div>
-        </div>
-        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              
-                <button type="button" class="btn-c rounded-pill" data-bs-dismiss="modal"><i class="bi bi-x-circle-fill"></i></button>
-              
-              <div class="modal-body px-4">
-                <div class="img">
-                  <img src="images/ageCalc.png" class="img-fluid" alt="">
-                </div>
-                <div class="content mt-3">
-                  <small>By Atharva Kassa</small
-                    ><span class="text-muted ms-2 ms-md-0">Mar 3,2025</span>
-                  <h4 class="card-title mt-3">Age Calculator</h4>
-                  <div class="social-links mt-4">
-                      <button href="" class="rounded-pill dribble">
-                        <i class="bi bi-dribbble"></i>
-                      </button>
-                      <button href="" class="rounded-pill whatsapp">
-                        <i class="bi bi-whatsapp"></i>
-                      </button>
-                      <button href="" class="rounded-pill behance">
-                        <i class="bi bi-behance"></i>
-                      </button>
-                  </div>
-                  <p class="text-muted mt-3">The Age Calculator is a simple web-based tool built using HTML, CSS, and JavaScript that allows users to determine their exact age in years, months, and days based on their date of birth. The interface includes an input field for the user to enter their birth date and a button to calculate the age. JavaScript processes the input by comparing the selected date with the current date, calculating the difference, and displaying the result dynamically. CSS enhances the user experience with a clean and responsive design. This project is useful for practicing date manipulation, form handling, and DOM updates in JavaScript, making it a great beginner-friendly application.</p>
-                </div>
-              </div>
-              <div class="heading px-2">
-                <h3 class="fs-3 ms-3">Leave A Comment</h3>
-              </div>
-              <div class="contact-form ms-3 mt-3 pb-4 px-2">
-                <div class="mb-3">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="exampleFormControlInput1"
-                    placeholder="Name"
-                  />
-                </div>
-                <div class="mb-3">
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="exampleFormControlInput1"
-                    placeholder="E-mail"
-                  />
-                </div>
-                <div class="mb-3">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="exampleFormControlInput1"
-                    placeholder="Mobile No."
-                  />
-                </div>
-                <div class="mb-3">
-                  <textarea
-                    class="form-control"
-                    id="exampleFormControlTextarea1"
-                    placeholder="Message"
-                    rows="5"
-                  ></textarea>
-                </div>
-                <button class="c-btn h-btn mt-3 py-2 px-4 rounded-pill">
-                  Submit
-                </button>
-              </div>
-              
-            </div>
-          </div>
-        </div>
-        <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              
-                <button type="button" class="btn-c rounded-pill" data-bs-dismiss="modal"><i class="bi bi-x-circle-fill"></i></button>
-              
-              <div class="modal-body px-4">
-                <div class="img">
-                  <img src="images/coinToss.png" class="img-fluid" alt="">
-                </div>
-                <div class="content mt-3">
-                  <small>By Atharva Kassa</small
-                    ><span class="text-muted ms-2 ms-md-0">Mar 8,2022</span>
-                  <h4 class="card-title mt-3">Coin Toss</h4>
-                  <div class="social-links mt-4">
-                      <button href="" class="rounded-pill dribble">
-                        <i class="bi bi-dribbble"></i>
-                      </button>
-                      <button href="" class="rounded-pill whatsapp">
-                        <i class="bi bi-whatsapp"></i>
-                      </button>
-                      <button href="" class="rounded-pill behance">
-                        <i class="bi bi-behance"></i>
-                      </button>
-                  </div>
-                  <p class="text-muted mt-3">The Coin Toss game is a simple web-based application created using HTML, CSS, and JavaScript that simulates flipping a coin. The interface includes a button to initiate the toss, and JavaScript randomly selects either "Heads" or "Tails" using the Math.random() function. The result is displayed on the screen, often accompanied by animations or sound effects for a more interactive experience. CSS is used to style the UI, adding effects like smooth transitions and a flipping animation for realism. This project is great for beginners learning random number generation, event handling, and UI updates with JavaScript.</p>
-                </div>
-              </div>
-              <div class="heading px-2">
-                <h3 class="fs-3 ms-3">Leave A Comment</h3>
-              </div>
-              <div class="contact-form ms-3 mt-3 pb-4 px-2">
-                <div class="mb-3">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="exampleFormControlInput1"
-                    placeholder="Name"
-                  />
-                </div>
-                <div class="mb-3">
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="exampleFormControlInput1"
-                    placeholder="E-mail"
-                  />
-                </div>
-                <div class="mb-3">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="exampleFormControlInput1"
-                    placeholder="Mobile No."
-                  />
-                </div>
-                <div class="mb-3">
-                  <textarea
-                    class="form-control"
-                    id="exampleFormControlTextarea1"
-                    placeholder="Message"
-                    rows="5"
-                  ></textarea>
-                </div>
-                <button class="c-btn h-btn mt-3 py-2 px-4 rounded-pill">
-                  Submit
-                </button>
-              </div>
-              
-            </div>
-          </div>
-        </div>
       </div>
-    </section>
-    <!-- blog section ends here -->
+    </div>
+  </section>
 
-    <!-- contact section starts -->
-    <section class="contact py-5" id="contact">
+  <!-- contact section starts -->
+  <section class="contact py-5" id="contact">
+    <div class="container">
       <div class="heading text-center">
         <small>Get in Touch</small>
         <h3>Any Questions? Feel Free to Contact</h3>
@@ -710,7 +446,7 @@
               <i class="bi bi-telephone-fill"></i>
             </div>
             <div class="col-11">
-              <p>+91 9834184252</p>
+              <p><a href="tel:+919834184252" class="phone-link">+91 9834184252</a></p>
             </div>
           </div>
           <div class="row justify-content-evenly">
@@ -770,69 +506,48 @@
           </div>
         </div>
       </div>
-    </section>
-    <!-- contact section ends here -->
+    </div>
+  </section>
 
-      <!-- now we will make back to top button when user click on it it will be redirected to top page  -->
-    <button
-      type="button"
-      class="btn btn-floating btn-lg rounded-pill"
-      id="btn-back-to-top"
-    >
-      <i class="bi bi-arrow-up"></i>
-    </button>
+  <!-- back to top button -->
+  <button
+    type="button"
+    class="btn btn-floating btn-lg rounded-pill"
+    id="btn-back-to-top"
+  >
+    <i class="bi bi-arrow-up"></i>
+  </button>
 
-    <!-- footer section starts  -->
-    <footer class="text-center text-muted py-4">
-      <h3 class="text-white pt-4" data-aos="fade-up">Portfolio</h3>
-      <div class="link-group mt-5" data-aos="fade-up">
-        <a href="#home">Home</a>
-        <div class="vr"></div>
-        <a href="#about">About</a>
-        <div class="vr"></div>
-        <a href="#service">Service</a>
-        <div class="vr"></div>
-        <a href="#portfolio">Portfolio</a>
-        <div class="vr"></div>
-        <a href="#blog">Blog</a>
-        <div class="vr"></div>
-        <a href="#contact">Contact</a>
-      </div>
-      <div class="social-links mt-5" data-aos="fade-up">
-        <button href="" class="rounded-pill dribble">
-          <i class="bi bi-dribbble"></i>
-        </button>
-        <button href="" class="rounded-pill whatsapp">
-          <i class="bi bi-whatsapp"></i>
-        </button>
-        <button href="" class="rounded-pill behance">
-          <i class="bi bi-behance"></i>
-        </button>
-      </div>
-      <hr class="text-muted my-4" />
+  <!-- footer section starts  -->
+  <footer class="text-center text-muted py-4">
+    <h3 class="text-white pt-4" data-aos="fade-up">Portfolio</h3>
+    <div class="link-group mt-5" data-aos="fade-up">
+      <a href="#home">Home</a><div class="vr"></div>
+      <a href="#about">About</a><div class="vr"></div>
+      <a href="#service">Service</a><div class="vr"></div>
+      <a href="#portfolio">Portfolio</a><div class="vr"></div>
+      <a href="#certificates">Certificates</a><div class="vr"></div>
+      <a href="#blog">Blog</a><div class="vr"></div>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="social-links mt-5" data-aos="fade-up">
+      <button class="rounded-pill dribble"><i class="bi bi-dribbble"></i></button>
+      <button class="rounded-pill whatsapp"><i class="bi bi-whatsapp"></i></button>
+      <button class="rounded-pill behance"><i class="bi bi-behance"></i></button>
+    </div>
+    <hr class="text-muted my-4">
+    <p>Copyright 2025 Portfolio | All Rights Reserved.</p>
+  </footer>
 
-      <p>Copyright 2025 Portfolio | All Rights Reserved.</p>
-    </footer>
-    <!-- footer section ends here -->
-
-      <!-- bootstrap javascript cdn link  -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-      crossorigin="anonymous"
-    ></script>
-
-    <!-- AOS library javascript link  -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      // initializing AOS library
-      AOS.init({
-        duration: 1000,
-        offset: 50,
-      });
-    </script>
-    <!-- custom js file linking -->
-    <script src="js/script.js"></script>
-    
-  </body>
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      offset: 50,
+    });
+  </script>
+  <script src="js/script.js"></script>
+</body>
 </html>
